@@ -1,0 +1,115 @@
+.container {
+    margin-left: 4rem;
+    margin-top: 4rem;
+    margin: 0;
+
+    font-size:0;
+
+  /* Es.10 Rimuovi gli spazi bianchi tra i riquadri con "font-size:0"  .*/ }
+
+ 
+  .container div {
+    width: 70px;
+    height: 60px;
+    border: 1px solid black;
+    display: inline-block; 
+
+    /* Es.1 Riquadri in orizzontalmente, con proprietà  display:inline-block.*/
+
+
+    font-size: 1rem; 
+    
+    /* Es.LAST Rimuovi gli spazi bianchi tra i riquadri+ riapparizione delle lettere.*/
+      
+  }
+
+
+   .container :nth-child(even) {
+    border-color: red;  
+
+    /* Es.2 Bordo rosso dei riquadri la cui positione è pari.*/
+  }
+
+  .container div:nth-child(odd) span:nth-child(even)
+   {
+   color: green;
+
+   /* Es.3 Colorare di verde le lettere B e D nei riquadri di posizione dispari.*/
+  }
+
+  .container div:nth-child(2) span:last-of-type
+   {
+   color: blue;
+
+   /* Es.4 Colorare di blu l’ultima lettera (D) del secondo riquadro(pari) .*/
+  }
+  
+  .container div:nth-child(6) span:not( :last-of-type)
+   {
+   color: yellow;
+
+   /* Es.5 Colorare di giallo tutte le lettere eccetto l’ultima (D) del sesto riquadro .*/
+  }
+
+
+
+
+  div {position: relative;}
+
+  .container div span:nth-child(1)
+   {
+    position: absolute;
+     top: 65px;
+     right: 30px;
+
+   /* Es.6 Cambiare la posizione della lettera A in tutti i riquadri. .*/
+   /* ...applicando position:relative ← genitore (div);   position:absolute ← figlio (span)  .*/
+  }
+
+  div {position: relative; margin-top: 30px;}
+
+  .container div span:nth-child(2)
+   {
+    position: absolute;
+     top: -25px;
+     right: 30px;
+
+   /* Es.7 Cambiare la posizione della lettera B in tutti i riquadri. .*/
+   }
+
+
+   div {position: relative; margin-top: 30px;}
+
+  .container div:nth-child(10) span:nth-child(4)
+  {
+   position: absolute;
+   right: -20px;
+   top: 15px;
+
+    /* Es.8 Cambiare la posizione della lettera D nell’ultimo riquadro.. .*/
+  }
+
+
+
+ div {position: relative; margin-top: 30px;  }
+
+ .container  {margin-left: 20px; }
+
+.container div:nth-child(1) span:nth-child(4)
+ {
+  position: absolute;
+  left: -20px;
+  top: 15px;
+
+  /* Es.9 Cambiare la posizione della lettera D nel primo riquadro.*/
+}
+
+
+.container div:nth-child(1) span:nth-child(4)
+ {
+  position: absolute;
+  left: -20px;
+  top: 15px;
+
+  /* Es.10 Rimuovi gli spazi bianchi tra i riquadri. (erano di default in position:inline-block)*/
+}
